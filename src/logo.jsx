@@ -4,35 +4,36 @@ function LogoComponant() {
   return (
     <>
       {/* Header background */}
-      <div className="bg-linear-to-t from-blue-900 to-sky-500 to-indigo-500">
-        <header
-          className="max-w-7xl mx-auto flex items-center justify-between px-4"
-        >
+      <div className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600">
+        <header className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+          
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <img
               src={logo}
               alt="Logo"
-              className="w-20 h-20 rounded-full m-2 p-2 bg-white"
+              className="w-16 h-16 rounded-full p-2 bg-white shadow-md"
             />
-            <h1 className="text-3xl font-bold text-white">Shopify</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-slate-100">
+              Shopify
+            </h1>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex gap-8 text-sm sm:text-base lg:text-lg font-medium text-white">
-            <a className="p-2 rounded-lg hover:ring-2 ring-orange-400" href="#">
+          <nav className="hidden md:flex gap-8 text-sm sm:text-base lg:text-lg font-medium text-slate-200">
+            <a className="p-2 rounded-lg hover:text-amber-400 transition" href="#">
               Home
             </a>
-            <a className="p-2 rounded-lg hover:ring-2 ring-orange-400" href="#">
+            <a className="p-2 rounded-lg hover:text-amber-400 transition" href="#">
               Products
             </a>
-            <a className="p-2 rounded-lg hover:ring-2 ring-orange-400" href="#">
+            <a className="p-2 rounded-lg hover:text-amber-400 transition" href="#">
               Categories
             </a>
-            <a className="p-2 rounded-lg hover:ring-2 ring-orange-400" href="#">
+            <a className="p-2 rounded-lg hover:text-amber-400 transition" href="#">
               Deals
             </a>
-            <a className="p-2 rounded-lg hover:ring-2 ring-orange-400" href="#">
+            <a className="p-2 rounded-lg hover:text-amber-400 transition" href="#">
               Contact Us
             </a>
           </nav>
@@ -41,11 +42,11 @@ function LogoComponant() {
           <button
             className="
               flex items-center gap-2
-               text-white
+              bg-amber-500 text-slate-900
               text-sm sm:text-base font-semibold
               px-4 py-2 sm:px-5 sm:py-2.5
               rounded-lg
-              hover:ring-1 ring-white
+              hover:bg-amber-600
               active:scale-95
               transition
             "
