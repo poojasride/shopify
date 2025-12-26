@@ -1,6 +1,7 @@
 import deliveryIcon from "./assets/free-delivery.png";
 import securePayment from "./assets/secure-payment.png";
 import customerSupport from "./assets/customer-service.png";
+import refund from "./assets/refund.png";
 
 function HeroBanner() {
   return (
@@ -48,34 +49,42 @@ function HeroBanner() {
       </div>
 
       {/* Features */}
-
-      <div className="bg-white max-w-7xl mx-auto px-6 py-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center rounded-2xl shadow-md">
+      <div
+        className="bg-white max-w-7xl mx-auto px-6 py-6 
+grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 
+rounded-2xl shadow-md"
+      >
         <div className="flex items-center gap-4">
-          {/*left side icon*/}
-          <img className="size-18" src={deliveryIcon} alt="" />
+          <img className="w-16 h-16" src={deliveryIcon} alt="Free Shipping" />
           <div>
-            <h3 className="font-semibold text-gray-800"> Free Shipping</h3>
-            <p className="text-gray-500 text-base">On orders over $99</p>
+            <h3 className="font-semibold text-gray-800">Free Shipping</h3>
+            <p className="text-gray-500 text-sm">On orders over $99</p>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-          <img className="size-18" src={securePayment} alt="" />
+          <img className="w-16 h-16" src={securePayment} alt="Secure Payment" />
           <div>
             <h3 className="font-semibold text-gray-800">Secure Payment</h3>
-            <p className="text-gray-500 text-base">100% protected</p>
+            <p className="text-gray-500 text-sm">100% protected</p>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-          <img className="size-18" src={customerSupport} alt="" />
+          <img className="w-16 h-16" src={customerSupport} alt="Support" />
           <div>
             <h3 className="font-semibold text-gray-800">24/7 Support</h3>
-            <p className="text-gray-500 text-base">Customer care anytime</p>
+            <p className="text-gray-500 text-sm">Customer care anytime</p>
           </div>
         </div>
 
-        
+        <div className="flex items-center gap-4">
+          <img className="w-16 h-16" src={refund} alt="Refund" />
+          <div>
+            <h3 className="font-semibold text-gray-800">100% Refund</h3>
+            <p className="text-gray-500 text-sm">Refund available</p>
+          </div>
+        </div>
       </div>
     </section>
   );
