@@ -1,5 +1,6 @@
 import LogoComponant from "./logo";
 import HeroBanner from "./hero.content";
+import CategoriesComponant from "./categories";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <LogoComponant />
       <HeroBanner />
+      <CategoriesComponant/>
     </>
   );
 }

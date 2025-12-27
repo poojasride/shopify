@@ -92,7 +92,7 @@ function HeroBanner() {
           <img className="w-14 h-14" src={refund} alt="Refund" />
           <div>
             <h3 className="font-semibold text-gray-800">100% Refund</h3>
-            <p className="text-gray-500 text-sm">Refund available</p>
+            <p className="text-gray-500 text-sm">Refund available within 10 days</p>
           </div>
         </div>
       </div>
