@@ -1,6 +1,6 @@
 import LogoComponant from "./logo";
 import HeroBanner from "./hero.content";
-import CategoriesComponant from "./categories";
+import CategoriesComponant from "./Categories";
 import ProductComponant from "./Products";
 import "./App.css";
 

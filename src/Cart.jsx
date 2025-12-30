@@ -1,15 +1,23 @@
-function CartComponant({ image, category }) {
+function CartComponant({ image, category, onClick }) {
   return (
-    <div className="rounded-xl overflow-hidden shadow-md border border-slate-700 hover:border-none hover:ring-2 hover:ring-amber-500 ">
-      <img
-        className="w-full h-48 object-contain bg-slate-500 p-4"
-        src={image}
-      />
-      <hr />
-      <div className="px-6 py-4 bg-slate-700 hover:bg-amber-500 text-center  ">
-        <p className="text-sm text-amber-400  hover:text-slate-900 font-bold uppercase">
+    <div
+      // onClick={() => onClick(category)}
+      className="group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300"
+    >
+      {/* Image */}
+      <div className="bg-slate-100 p-6">
+        <img
+          src={image}
+          alt={category}
+          className="w-full h-40 object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      {/* Category Button */}
+      <div className="bg-slate-900 group-hover:bg-amber-500 transition duration-300 text-center py-3">
+        <button className="text-amber-400 group-hover:text-slate-900 font-bold uppercase tracking-wide">
           {category}
-        </p>
+        </button>
       </div>
     </div>
   );
