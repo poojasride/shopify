@@ -5,9 +5,7 @@ function CartComponant({ image, category }) {
         className="w-full h-48 object-contain bg-slate-500 p-4"
         src={image}
       />
-
       <hr />
-
       <div className="px-6 py-4 bg-slate-700 hover:bg-amber-500 text-center  ">
         <p className="text-sm text-amber-400  hover:text-slate-900 font-bold uppercase">
           {category}

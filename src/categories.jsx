@@ -6,7 +6,7 @@ function CategoriesComponant() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchCategories = async () => {
       try {
         const url = "https://fakestoreapi.com/products";
         const response = await axios.get(url);
@@ -28,7 +28,7 @@ function CategoriesComponant() {
       }
     };
 
-    fetchProducts();
+    fetchCategories();
   }, []);
 
   return (
