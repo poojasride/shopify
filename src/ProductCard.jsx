@@ -2,33 +2,43 @@ function ProductCard({ product }) {
   const stars = Math.floor(Math.random() * 5) + 1;
 
   return (
-    <div className="bg-white rounded shadow-lg p-4 flex flex-col h-full transition duration-300 ease-in-out hover:translate-y-1 hover:scale-100 hover:shadow-xl ">
-      <img
-        className="w-full h-48 object-contain p-4"
-        src={product.image}
-        alt={product.title}
-      />
-
-      <h3 className="font-semibold text-gray-800 p-2 line-clamp-2 h-[3.2rem]">
-        {product.title}
-      </h3>
-
-      {/* RANDOM STARS */}
-      <div className="px-2 py-1">
-        <span className="text-yellow-500 text-lg font-bold">
-          {"★".repeat(stars)}
-          {"☆".repeat(5 - stars)}
-        </span>
+    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out flex flex-col h-full overflow-hidden">
+      {/* Image Section */}
+      <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center p-4">
+        <img
+          src={product.image}
+          alt={product.title}
+          className="max-h-full object-contain transition-transform duration-300 hover:scale-105"
+        />
       </div>
 
-      {/*Divider */}
-      <span className="h-1 w-full bg-slate-300 mt-4"></span>
+      {/* Content Section */}
+      <div className="p-4 flex flex-col flex-1">
+        {/* Title */}
+        <h3 className="font-semibold text-gray-900 text-lg line-clamp-1 mb-2">
+          {product.title}
+        </h3>
 
-      <p className="text-gray-800 font-bold p-2">${product.price}</p>
+        {/* Stars */}
+        <div className="flex items-center mb-3">
+          <span className="text-yellow-400 text-lg">
+            {"★".repeat(stars)}
+            {"☆".repeat(5 - stars)}
+          </span>
+          <span className="text-gray-400 text-sm ml-2">({Math.floor(Math.random() * 200 + 1)})</span>
+        </div>
 
-      <button className="mt-auto bg-amber-500 hover:bg-amber-600 text-black p-2 rounded-lg cursor-pointer">
-        Add to Cart
-      </button>
+        {/* Divider */}
+        <div className="border-t border-gray-200 my-2"></div>
+
+        {/* Price */}
+        <p className="text-gray-900 font-bold text-xl mb-4">${product.price}</p>
+
+        {/* Button */}
+        <button className="mt-auto bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 rounded-lg shadow-md hover:shadow-lg transition">
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 }

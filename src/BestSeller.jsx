@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
-import seller from "./assets/products.png";
+import seller from "./assets/seller.png";
 
-function ProductComponant() {
+function BestSellerComponant() {
   const [products, setProducts] = useState([]);
+
+  // Pick first 4 as best sellers
+  const bestSellers = products.slice(0, 4);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,23 +31,23 @@ function ProductComponant() {
             <img
               src={seller}
               alt=""
-              className="w-16 h-16 rounded-full p-2 bg-white shadow-md"
+              className="w-16 h-16 rounded-full p-2 bg-white shadow-md animate-pulse"
             />
             <h1 className="text-gray-900 font-bold text-3xl md:text-4xl">
-              Our <span className="text-amber-400"> Products</span>
+              Best <span className="text-amber-400"> Sellers</span>
             </h1>
           </div>
 
-          <p className="text-gray-600 mt-2 font-bold ">
-            EXPLORE OUR COLLECTIONS
+          <p className="text-gray-600 mt-2 font-bold">
+            MOST LOVED PRODUCTS BY OUR VALUBALE CUSTOMERS
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((item) => (
+          {bestSellers.map((item) => (
             <div key={item.id} className="border border-slate-200 rounded-2xl">
-              <ProductCard product={item}/>
+              <ProductCard product={item} />
             </div>
           ))}
         </div>
@@ -53,4 +56,4 @@ function ProductComponant() {
   );
 }
 
-export default ProductComponant;
+export default BestSellerComponant;

@@ -1,7 +1,8 @@
 import LogoComponant from "./logo";
 import HeroBanner from "./hero.content";
-import CategoriesComponant from "./Categories";
+
 import ProductComponant from "./Products";
+import BestSellerComponent from "./BestSeller";
 import "./App.css";
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
     <>
       <LogoComponant />
       <HeroBanner />
+      <BestSellerComponent />
       <ProductComponant />
-      <CategoriesComponant />
     </>
   );
 }
