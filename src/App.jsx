@@ -1,8 +1,8 @@
 import LogoComponant from "./logo";
-import HeroBanner from "./hero.content";
-
+import HeroBanner from "./HeroContent";
 import ProductComponant from "./Products";
 import BestSellerComponent from "./BestSeller";
+import Content from "./Content";
 import "./App.css";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <HeroBanner />
       <BestSellerComponent />
       <ProductComponant />
+      <Content />
     </>
   );
 }

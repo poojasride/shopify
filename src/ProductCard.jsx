@@ -4,7 +4,7 @@ function ProductCard({ product }) {
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out flex flex-col h-full overflow-hidden">
       {/* Image Section */}
-      <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center p-4">
+      <div className="relative w-full h-36 bg-slate-100 flex items-center justify-center p-4">
         <img
           src={product.image}
           alt={product.title}

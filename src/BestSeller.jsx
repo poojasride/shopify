@@ -23,7 +23,7 @@ function BestSellerComponant() {
   }, []);
 
   return (
-    <div className="bg-white py-10">
+    <div className="bg-gradient-to-br from-slate-800 via-slate-400 to-slate-700 py-14">
       <section className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-10">
@@ -33,12 +33,12 @@ function BestSellerComponant() {
               alt=""
               className="w-16 h-16 rounded-full p-2 bg-white shadow-md animate-pulse"
             />
-            <h1 className="text-gray-900 font-bold text-3xl md:text-4xl">
+            <h1 className="text-gray-900 font-bold text-3xl md:text-4xl tracking-wide">
               Best <span className="text-amber-400"> Sellers</span>
             </h1>
           </div>
 
-          <p className="text-gray-600 mt-2 font-bold">
+          <p className="text-white mt-2 font-bold tracking-wide">
             MOST LOVED PRODUCTS BY OUR VALUBALE CUSTOMERS
           </p>
         </div>
