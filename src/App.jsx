@@ -2,7 +2,7 @@ import LogoComponant from "./logo";
 import HeroBanner from "./HeroContent";
 import ProductComponant from "./Products";
 import BestSellerComponent from "./BestSeller";
-import Content from "./Content";
+import Content from "./FooterContent";
 import "./App.css";
 
 function App() {

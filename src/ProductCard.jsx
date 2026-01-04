@@ -1,6 +1,11 @@
+import { useCart } from "./handleAddTocart";
+
 function ProductCard({ product }) {
   const stars = Math.floor(Math.random() * 5) + 1;
+  const { addToCart, cartItems } = useCart();
 
+  const cartProduct = cartItems.find((item) => item.id === product.id);
+  const quantity = cartProduct ? cartProduct.quantity : 0;
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out flex flex-col h-full overflow-hidden">
       {/* Image Section */}
@@ -25,7 +30,9 @@ function ProductCard({ product }) {
             {"★".repeat(stars)}
             {"☆".repeat(5 - stars)}
           </span>
-          <span className="text-gray-400 text-sm ml-2">({Math.floor(Math.random() * 200 + 1)})</span>
+          <span className="text-gray-400 text-sm ml-2">
+            ({Math.floor(Math.random() * 200 + 1)})
+          </span>
         </div>
 
         {/* Divider */}
@@ -35,8 +42,17 @@ function ProductCard({ product }) {
         <p className="text-gray-900 font-bold text-xl mb-4">${product.price}</p>
 
         {/* Button */}
-        <button className="mt-auto bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 rounded-lg shadow-md hover:shadow-lg transition">
-          Add to Cart
+        <button
+          onClick={() => addToCart(product)}
+          className={`mt-auto font-semibold py-2 rounded-lg shadow-md transition
+    ${
+      quantity > 0
+        ? "bg-green-600 hover:bg-green-700 text-white"
+        : "bg-amber-500 hover:bg-amber-600 text-white"
+    }
+  `}
+        >
+          {quantity > 0 ? `Added (${quantity})` : "Add to Cart"}
         </button>
       </div>
     </div>
