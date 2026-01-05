@@ -69,16 +69,7 @@ function LogoComponant() {
       {/* POPUP */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-3">
-          <div
-            className="
-      w-full max-w-lg
-      bg-white
-      rounded-2xl
-      shadow-2xl
-      flex flex-col
-      max-h-[90vh]
-    "
-          >
+          <div className="  w-full max-w-lg bg-white rounded-2xl  shadow-2xl  flex flex-col  max-h-[90vh] ">
             {/* HEADER */}
             <div className="flex items-center justify-between px-5 py-4 border-b">
               <h2 className="text-lg font-semibold text-gray-800">
@@ -138,7 +129,7 @@ function LogoComponant() {
                       text-lg
                     "
                         >
-                          −
+                          -
                         </button>
 
                         <span className="font-semibold text-gray-800">
