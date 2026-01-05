@@ -8,10 +8,10 @@ export function CartProvider({ children }) {
   // ADD TO CART
   const addToCart = (product) => {
     setCartItems((prev) => {
-      const existing = prev.find(item => item.id === product.id);
+      const existing = prev.find((item) => item.id === product.id);
 
       if (existing) {
-        return prev.map(item =>
+        return prev.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
@@ -22,9 +22,33 @@ export function CartProvider({ children }) {
     });
   };
 
-  // ✅ REMOVE FROM CART (ADD HERE)
+  // INCREASE QTY
+  const increaseQty = (id) => {
+    setCartItems((prev) =>
+      prev.map((item) =>
+        item.id === id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+    );
+  };
+
+  // DECREASE QTY
+  const decreaseQty = (id) => {
+    setCartItems((prev) =>
+      prev
+        .map((item) =>
+          item.id === id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
+  // REMOVE
   const removeFromCart = (id) => {
-    setCartItems((prev) => prev.filter(item => item.id !== id));
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
   return (
@@ -32,7 +56,9 @@ export function CartProvider({ children }) {
       value={{
         cartItems,
         addToCart,
-        removeFromCart, // 👈 expose here
+        increaseQty,
+        decreaseQty,
+        removeFromCart,
       }}
     >
       {children}
